@@ -60,11 +60,11 @@ This lab demonstrates how analysts inspect DNS activity and build foundational n
 
 ## Evidence
 
-![DNS Capture](./screenshots/dns-capture.png)
+![DNS Capture](dns-capture.png)
 
-![DNS Query Terminal](./screenshots/dns-query-terminal.png)
+![DNS Query Terminal](dns-query-terminal.png)
 
-![DNS Packet Analysis](./screenshots/dns-packet-analysis.png)
+![DNS Packet Analysis](dns-packet-analysis.png)
 
 ## Conclusions
 
