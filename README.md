@@ -127,4 +127,19 @@ All screenshots are stored in the repository and demonstrate DNS query generatio
 
 ## Conclusions
 
+This lab demonstrated how DNS traffic can be captured and analyzed using Wireshark.
+
+By generating DNS queries with `nslookup`, we were able to observe the full query and response process at the packet level. The analysis showed how domain names are resolved into IP addresses and how this communication appears in network traffic.
+
+Understanding DNS behavior is critical for SOC analysts, as DNS is frequently used in both legitimate operations and malicious activity. Being able to identify normal DNS patterns provides a foundation for detecting suspicious or anomalous behavior in real-world environments.
+
 ## Next Steps
+
+To continue developing network analysis and detection skills:
+
+- **SOC Lab 08 — HTTP Traffic Analysis**
+- Capture and analyze HTTP requests and responses
+- Identify key HTTP methods and status codes
+- Understand how web traffic appears in packet captures
+
+This progression builds on DNS analysis and expands into application-layer protocol visibility.
