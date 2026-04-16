@@ -99,6 +99,22 @@ From a SOC perspective, this type of traffic is important because DNS queries ar
 
 ## Detection Engineering Insights
 
+DNS traffic provides valuable visibility into both normal and potentially malicious network activity.
+
+In this lab, standard DNS query and response behavior was observed. However, similar traffic patterns are often leveraged by attackers for command-and-control communication, domain generation algorithms (DGA), and data exfiltration.
+
+Security teams can build detections by monitoring for:
+
+- Unusually high volumes of DNS queries from a single host
+- Requests to newly registered or low-reputation domains
+- DNS queries with long or random-looking domain names
+- Repeated failed DNS queries (NXDOMAIN responses)
+- DNS traffic to uncommon or suspicious external servers
+
+These behaviors can be analyzed using network monitoring tools, intrusion detection systems (IDS), and SIEM platforms.
+
+Understanding how normal DNS traffic appears in packet captures allows analysts to more easily identify deviations that may indicate malicious activity.
+
 ## Evidence
 
 All screenshots are stored in the repository and demonstrate DNS query generation and packet-level analysis.
