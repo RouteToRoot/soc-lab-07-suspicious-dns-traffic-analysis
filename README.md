@@ -60,6 +60,8 @@ This lab demonstrates how analysts inspect DNS activity and build foundational n
 
 ## Evidence
 
+All screenshots are stored in the repository and demonstrate DNS query generation and packet-level analysis.
+
 ![DNS Capture](dns-capture.png)
 
 ![DNS Query Terminal](dns-query-terminal.png)
