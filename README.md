@@ -54,6 +54,21 @@ This lab demonstrates how analysts inspect DNS activity and build foundational n
 
 ## Detection Workflow
 
+### 1. Start Packet Capture in Wireshark
+
+Wireshark was used to capture live DNS traffic for analysis. The capture was initiated on the appropriate network interface prior to generating DNS queries.
+
+---
+
+### 2. Generate DNS Traffic
+
+DNS traffic was generated using the `nslookup` command to resolve a domain name.
+
+**Command:**
+
+```bash
+nslookup google.com
+
 ## Traffic Analysis
 
 ## Detection Engineering Insights
