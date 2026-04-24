@@ -25,6 +25,70 @@ This lab demonstrates how analysts inspect DNS activity and build foundational n
 
 ---
 
+## Incident Ticket (ServiceNow Simulation)
+
+**Incident ID:** INC-0007  
+**Date/Time Detected:** 2026-04-23 21:10  
+**Detected By:** SOC Analyst (Lab Simulation)  
+**Severity:** Low  
+**Category:** Network Security  
+**Subcategory:** DNS  
+
+---
+
+### Short Description
+Standard DNS query activity observed from 127.0.0.1 resolving external domain (google.com).
+
+---
+
+### Detailed Description
+During packet capture, DNS traffic was generated using the `nslookup` command to resolve the domain `google.com`.
+
+Packet analysis revealed standard DNS query and response behavior between the local system and the configured DNS server. The observed traffic includes a DNS query for the domain followed by a corresponding response containing resolved IP addresses.
+
+---
+
+### Indicators of Compromise (IOCs)
+- Source IP: 127.0.0.1  
+- Destination Domain: google.com  
+- Protocol: DNS  
+
+---
+
+### Analysis
+Packet inspection confirmed normal DNS query and response patterns with no anomalies observed.
+
+The DNS request and response sequence is consistent with expected behavior for domain resolution. No indicators of suspicious or malicious activity were identified during analysis.
+
+---
+
+### Impact Assessment
+- No external threat observed; activity limited to local lab environment  
+- No system compromise detected  
+
+---
+
+### Response Actions Taken
+- Captured traffic using Wireshark  
+- Applied DNS filter (`dns`)  
+- Analyzed packet structure and query/response behavior  
+- Documented findings  
+
+---
+
+### Recommended Actions
+- Continue monitoring DNS traffic for unusual query patterns  
+- Implement alerting for high-frequency DNS requests  
+- Monitor for queries to low-reputation or newly registered domains  
+- Tune alert thresholds to reduce false positives in controlled environments  
+
+---
+
+### Status
+Closed (No Threat Identified)
+
+---
+
 ## Lab Objectives
 
 - Generate DNS traffic in a controlled environment
