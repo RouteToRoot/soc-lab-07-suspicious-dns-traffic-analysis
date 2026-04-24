@@ -54,22 +54,6 @@ This lab demonstrates how analysts inspect DNS activity and build foundational n
 
 ## Detection Workflow
 
-DNS traffic provides valuable visibility into both normal and potentially malicious network activity.
-
-In this lab, standard DNS query and response behavior was observed. However, similar traffic patterns are often leveraged by attackers for command-and-control communication, domain generation algorithms (DGA), and data exfiltration.
-
-Security teams can build detections by monitoring for:
-
-- Unusually high volumes of DNS queries from a single host
-- Requests to newly registered or low-reputation domains
-- DNS queries with long or random-looking domain names
-- Repeated failed DNS queries (NXDOMAIN responses)
-- DNS traffic to uncommon or suspicious external servers
-
-These behaviors can be analyzed using network monitoring tools, intrusion detection systems (IDS), and SIEM platforms.
-
-Understanding how normal DNS traffic appears in packet captures allows analysts to more easily identify deviations that may indicate malicious activity.
-
 ### 1. Start Packet Capture in Wireshark
 
 Wireshark was used to capture live DNS traffic for analysis. The capture was initiated on the appropriate network interface prior to generating DNS queries.
@@ -84,6 +68,19 @@ DNS traffic was generated using the `nslookup` command to resolve a domain name.
 
 ```bash
 nslookup google.com
+```
+
+---
+
+### 3. Apply DNS Filter in Wireshark
+
+To isolate DNS traffic, a display filter was applied.
+
+**Wireshark Filter:**
+
+```text
+dns
+```
 
 ## Traffic Analysis
 
